@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 410087040}
+  m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0.006865503, g: 0.0073846374, b: 0.007786114, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
@@ -1050,6 +1050,17 @@ MonoBehaviour:
     m_Hold: 1
     m_Blend:
       m_Style: 1
+      m_Time: 0
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+  - m_VirtualCamera: {fileID: 1975413401}
+    m_Hold: 0
+    m_Blend:
+      m_Style: 1
       m_Time: 10
       m_CustomCurve:
         serializedVersion: 2
@@ -1058,6 +1069,17 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   - m_VirtualCamera: {fileID: 1975413401}
+    m_Hold: 1
+    m_Blend:
+      m_Style: 1
+      m_Time: 0
+      m_CustomCurve:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+  - m_VirtualCamera: {fileID: 1012085215}
     m_Hold: 0
     m_Blend:
       m_Style: 1
