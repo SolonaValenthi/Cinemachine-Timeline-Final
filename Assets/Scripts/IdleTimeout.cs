@@ -5,6 +5,7 @@ using UnityEngine;
 public class IdleTimeout : MonoBehaviour
 {
     [SerializeField] private PlayerCameras _playerCams;
+    [SerializeField] private UIManager _uiManager;
 
     private float _idleTime = 0.0f; // time since last input
     private bool _isIdle = false;
@@ -24,6 +25,7 @@ public class IdleTimeout : MonoBehaviour
         {
             _isIdle = true;
             _playerCams.Idle();
+           _uiManager.IdleToggle(true);
         }
     }
 
@@ -34,6 +36,7 @@ public class IdleTimeout : MonoBehaviour
             if (_isIdle)
             {
                 _playerCams.WakeUp();
+                _uiManager.IdleToggle(false);
             }
 
             _isIdle = false;
