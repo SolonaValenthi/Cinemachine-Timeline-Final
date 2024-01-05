@@ -756,7 +756,7 @@ MonoBehaviour:
   m_ShowCameraFrustum: 1
   m_IgnoreTimeScale: 0
   m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
+  m_UpdateMethod: 1
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
     m_Style: 0
@@ -1680,7 +1680,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 892055016}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.10962711, y: -0.0000000085513365, z: 9.431428e-10, w: 0.99397284}
+  m_LocalRotation: {x: 0.10962711, y: 0.000000008551338, z: -9.431429e-10, w: 0.99397284}
   m_LocalPosition: {x: 0, y: 1.9238315, z: -13.399}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2514,7 +2514,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192278103}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27941158, y: 0.00000003304215, z: -0.000000009615324, w: 0.96017146}
+  m_LocalRotation: {x: 0.27941158, y: -0.00000003304215, z: 0.000000009615324, w: 0.96017146}
   m_LocalPosition: {x: 0, y: 9.314, z: -22.499}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3366,6 +3366,7 @@ GameObject:
   - component: {fileID: 4365474846954942565}
   - component: {fileID: 8350732321317856407}
   - component: {fileID: 8350732321317856408}
+  - component: {fileID: 8350732321317856409}
   m_Layer: 0
   m_Name: Player_Ship
   m_TagString: Untagged
@@ -3485,6 +3486,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerCams: {fileID: 8350732321317856407}
   _uiManager: {fileID: 886487616}
+--- !u!114 &8350732321317856409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3576635204265032253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0c5290215201a4ea0f6fff1eb482d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _moveSpeed: 2
+  _rotSpeed: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
