@@ -689,8 +689,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13801807, y: 0, z: 0, w: 0.9904297}
-  m_LocalPosition: {x: 0, y: 8.820999, z: -12.5}
+  m_LocalRotation: {x: 0.14306581, y: 0.000000017029384, z: -0.0000000024616453, w: 0.9897132}
+  m_LocalPosition: {x: 0, y: 8.421, z: -10.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1791,8 +1791,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 930105342}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13801807, y: 0, z: -0, w: 0.9904297}
-  m_LocalPosition: {x: 0, y: 4.899999, z: -12.5}
+  m_LocalRotation: {x: 0.14306581, y: 0.000000017029384, z: -0.0000000024616453, w: 0.9897132}
+  m_LocalPosition: {x: 0, y: 4.4999995, z: -10.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1902,7 +1902,7 @@ GameObject:
   - component: {fileID: 1018019226}
   - component: {fileID: 1018019229}
   - component: {fileID: 1018019228}
-  - component: {fileID: 1018019227}
+  - component: {fileID: 1018019230}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -1925,30 +1925,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 930105344}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1018019227
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018019225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd6043bde05a7fc4cba197d06915c1e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damping: {x: 0.1, y: 0.3, z: 0.3}
-  ShoulderOffset: {x: 0, y: 4.5, z: -10.5}
-  VerticalArmLength: 0.4
-  CameraSide: 1
-  CameraDistance: 2
-  CameraCollisionFilter:
-    serializedVersion: 2
-    m_Bits: 0
-  IgnoreTag: 
-  CameraRadius: 0.2
-  DampingIntoCollision: 0
-  DampingFromCollision: 2
 --- !u!114 &1018019228
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1988,6 +1964,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1018019230
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018019225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_BindingMode: 3
+  m_FollowOffset: {x: 0, y: 4.5, z: -10.5}
+  m_XDamping: 0
+  m_YDamping: 0
+  m_ZDamping: 0
+  m_AngularDampingMode: 0
+  m_PitchDamping: 0
+  m_YawDamping: 0
+  m_RollDamping: 0
+  m_AngularDamping: 0
 --- !u!1 &1030897004
 GameObject:
   m_ObjectHideFlags: 0
@@ -2514,7 +2512,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192278103}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.27941158, y: -0.00000003304215, z: 0.000000009615324, w: 0.96017146}
+  m_LocalRotation: {x: 0.27941158, y: 0.00000003304215, z: -0.000000009615324, w: 0.96017146}
   m_LocalPosition: {x: 0, y: 9.314, z: -22.499}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3111,7 +3109,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2131309807}
   - component: {fileID: 2131309810}
-  - component: {fileID: 2131309809}
   - component: {fileID: 2131309808}
   m_Layer: 0
   m_Name: cm
@@ -3197,28 +3194,6 @@ MonoBehaviour:
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
   m_ApplyBeforeBody: 0
---- !u!114 &2131309809
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131309806}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa7155796051b734daa718462081dc5f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 1.31, z: 0.13}
-  m_XDamping: 0
-  m_YDamping: 0
-  m_ZDamping: 0
-  m_AngularDampingMode: 0
-  m_PitchDamping: 0
-  m_YawDamping: 0
-  m_RollDamping: 0
-  m_AngularDamping: 0
 --- !u!114 &2131309810
 MonoBehaviour:
   m_ObjectHideFlags: 3
