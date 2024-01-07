@@ -31,18 +31,13 @@ public class FlightControls : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (_moveSpeed < 15.0f)
-            {
-                _moveSpeed += 0.2f;
-            }
+            _moveSpeed += 0.5f;
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            if (_moveSpeed > 0.3f)
-            {
-                _moveSpeed -= 0.2f;
-            }
+            _moveSpeed -= 0.5f;
         }
+        _moveSpeed = Mathf.Clamp(_moveSpeed, 0f, 15f);
 
         transform.Translate(Vector3.forward * _moveSpeed * Time.deltaTime);
         transform.Rotate(Vector3.left * _rotSpeed * _vertical * Time.deltaTime); // pitch control
