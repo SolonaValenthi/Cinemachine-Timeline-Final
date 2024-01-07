@@ -9,6 +9,7 @@ public class FlightControls : MonoBehaviour
 
     private float _vertical;
     private float _horizontal;
+    private float _roll;
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +27,11 @@ public class FlightControls : MonoBehaviour
     {
         _vertical = Input.GetAxis("Vertical");
         _horizontal = Input.GetAxis("Horizontal");
+        _roll = Input.GetAxis("Roll");
 
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            if (_moveSpeed < 10.0f)
+            if (_moveSpeed < 15.0f)
             {
                 _moveSpeed += 0.2f;
             }
@@ -45,5 +47,6 @@ public class FlightControls : MonoBehaviour
         transform.Translate(Vector3.forward * _moveSpeed * Time.deltaTime);
         transform.Rotate(Vector3.left * _rotSpeed * _vertical * Time.deltaTime); // pitch control
         transform.Rotate(Vector3.up * _rotSpeed * _horizontal * Time.deltaTime); // yaw control
+        transform.Rotate(Vector3.forward * (_rotSpeed * 1.5f) * _roll * Time.deltaTime); // roll control
     }
 }
