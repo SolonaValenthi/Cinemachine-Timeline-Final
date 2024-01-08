@@ -7,6 +7,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject _controlText;
     [SerializeField] private GameObject _idleText;
 
+    private bool _inCutscene;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +35,22 @@ public class UIManager : MonoBehaviour
         {
             _controlText.SetActive(true);
             _idleText.SetActive(false);
+        }
+    }
+
+    public void CutsceneToggle()
+    {
+        if (_inCutscene)
+        {
+            _controlText.SetActive(true);
+            _idleText.SetActive(false);
+            _inCutscene = false;
+        }
+        else
+        {
+            _controlText.SetActive(false);
+            _idleText.SetActive(false);
+            _inCutscene = true;
         }
     }
 }

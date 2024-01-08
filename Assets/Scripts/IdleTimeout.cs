@@ -9,6 +9,7 @@ public class IdleTimeout : MonoBehaviour
 
     private float _idleTime = 0.0f; // time since last input
     private bool _isIdle = false;
+    private bool _inCutscene;
 
     // Start is called before the first frame update
     void Start()
@@ -31,20 +32,35 @@ public class IdleTimeout : MonoBehaviour
 
     private void CheckInput()
     {
-        if (Input.anyKey || Input.GetAxis("Mouse X") != 0f || Input.GetAxis("Mouse Y") != 0f)
+        if (_inCutscene == false)
         {
-            if (_isIdle)
+            if (Input.anyKey || Input.GetAxis("Mouse X") != 0f || Input.GetAxis("Mouse Y") != 0f)
             {
-                _playerCams.WakeUp();
-                _uiManager.IdleToggle(false);
-            }
+                if (_isIdle)
+                {
+                    _playerCams.WakeUp();
+                    _uiManager.IdleToggle(false);
+                }
 
-            _isIdle = false;
-            _idleTime = 0.0f;
+                _isIdle = false;
+                _idleTime = 0.0f;
+            }
+            else
+            {
+                _idleTime += Time.deltaTime;
+            }
+        }
+    }
+
+    public void CutsceneToggle()
+    {
+        if (_inCutscene)
+        {
+            _inCutscene = false;
         }
         else
         {
-            _idleTime += Time.deltaTime;
+            _inCutscene = true;
         }
     }
 }

@@ -10,6 +10,7 @@ public class FlightControls : MonoBehaviour
     private float _vertical;
     private float _horizontal;
     private float _roll;
+    private bool _inCutscene;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,10 @@ public class FlightControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ShipMovement();
+        if (_inCutscene == false)
+        {
+            ShipMovement();
+        }
     }
 
     private void ShipMovement()
@@ -43,5 +47,17 @@ public class FlightControls : MonoBehaviour
         transform.Rotate(Vector3.left * _rotSpeed * _vertical * Time.deltaTime); // pitch control
         transform.Rotate(Vector3.up * _rotSpeed * _horizontal * Time.deltaTime); // yaw control
         transform.Rotate(Vector3.forward * (_rotSpeed * 1.5f) * _roll * Time.deltaTime); // roll control
+    }
+
+    public void CutsceneToggle()
+    {
+        if (_inCutscene)
+        {
+            _inCutscene = false;
+        }
+        else
+        {
+            _inCutscene = true;
+        }
     }
 }
