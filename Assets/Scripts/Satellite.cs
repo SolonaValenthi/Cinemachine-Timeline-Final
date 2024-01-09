@@ -23,6 +23,7 @@ public class Satellite : MonoBehaviour
     public void FixColor()
     {
         _errorLight.color = new Color(0, 1, 0, 1);
+        _errorLight.intensity = 25f;
         StopCoroutine("ErrorPulse");
     }
 
