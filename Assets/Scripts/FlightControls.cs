@@ -8,6 +8,7 @@ public class FlightControls : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotSpeed;
     [SerializeField] private PlayableDirector _repairDirector;
+    [SerializeField] private PlayableDirector _warpDirector;
     [SerializeField] private ParticleSystem[] _sideEngines;
     [SerializeField] private ParticleSystem _mainEngine;
 
@@ -82,6 +83,13 @@ public class FlightControls : MonoBehaviour
             {
                 _moveSpeed = 0.0f;
                 _repairDirector.Play();
+            }
+        }
+        if (other.tag == "Warp")
+        {
+            if (_warpDirector.gameObject.activeInHierarchy == true)
+            {
+
             }
         }
     }
