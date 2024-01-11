@@ -89,8 +89,9 @@ public class FlightControls : MonoBehaviour
         {
             if (_warpDirector.gameObject.activeInHierarchy == true)
             {
-
+                _warpDirector.Play();
             }
+            other.gameObject.SetActive(false);
         }
     }
 }
