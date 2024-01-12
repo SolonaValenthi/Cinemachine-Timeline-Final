@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject _controlText;
     [SerializeField] private GameObject _idleText;
+    [SerializeField] private GameObject _outroDisplay;
 
     private bool _inCutscene;
 
@@ -13,6 +15,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         _idleText.SetActive(false);
+        _outroDisplay.SetActive(false);
     }
 
     // Update is called once per frame
@@ -20,7 +23,7 @@ public class UIManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Application.Quit();
+            QuitGame();
         }
     }
 
@@ -52,5 +55,20 @@ public class UIManager : MonoBehaviour
             _idleText.SetActive(false);
             _inCutscene = true;
         }
+    }
+
+    public void OutroDisplay()
+    {
+        _outroDisplay.SetActive(true);
+    }
+
+    public void ReloadGame()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

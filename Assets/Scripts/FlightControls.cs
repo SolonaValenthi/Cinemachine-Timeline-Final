@@ -9,6 +9,7 @@ public class FlightControls : MonoBehaviour
     [SerializeField] private float _rotSpeed;
     [SerializeField] private PlayableDirector _repairDirector;
     [SerializeField] private PlayableDirector _warpDirector;
+    [SerializeField] private PlayableDirector _outroDirector;
     [SerializeField] private ParticleSystem[] _sideEngines;
     [SerializeField] private ParticleSystem _mainEngine;
 
@@ -92,6 +93,11 @@ public class FlightControls : MonoBehaviour
                 _warpDirector.Play();
             }
             other.gameObject.SetActive(false);
+        }
+        if (other.tag == "Flagship")
+        {
+            _warpDirector.gameObject.SetActive(false);
+            _outroDirector.gameObject.SetActive(true);
         }
     }
 }
