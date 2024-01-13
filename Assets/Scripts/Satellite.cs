@@ -57,12 +57,12 @@ public class Satellite : MonoBehaviour
         {
             while (_errorLight.intensity > 0)
             {
-                _errorLight.intensity -= 0.5f;
+                _errorLight.intensity -= 0.3f;
                 yield return null;
             }
             while (_errorLight.intensity < 25)
             {
-                _errorLight.intensity += 0.5f;
+                _errorLight.intensity += 0.3f;
                 yield return null;
             }
         }
